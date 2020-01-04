@@ -277,10 +277,10 @@ FTP安装包(在安装CentOS时">
 
 <h2 id="修改配置文件"><a href="#修改配置文件" class="headerlink" title="修改配置文件"></a>修改配置文件</h2><h6 id="修改FTP配置文件"><a href="#修改FTP配置文件" class="headerlink" title="修改FTP配置文件"></a>修改FTP配置文件</h6> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#编辑vsftp.conf文件</span><br><span class="line">vim &#x2F;etc&#x2F;vsftpd&#x2F;vsftpd.conf</span><br></pre></td></tr></table></figure>
 
-<p>在vsftp.conf中将anonymous_enable=NO,并在该句的下方加上local_root=/data/collect。<br><img src="https://upload-images.jianshu.io/upload_images/2367321-71522a518c0d378a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="vsftp.conf"></p>
+<p>在vsftp.conf中将anonymous_enable=NO,并在该句的下方加上local_root=/data/collect。<br><img src="https://s2.ax1x.com/2020/01/04/l0p2gU.png" alt="vsftp.conf"></p>
 <p>######修改selinux文件</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#修改selinux配置文件</span><br><span class="line">vim &#x2F;etc&#x2F;selinux&#x2F;config</span><br></pre></td></tr></table></figure>
-<p>先注释文件里面的两句，再在最后加上SELINUX=disabled<br><img src="https://upload-images.jianshu.io/upload_images/2367321-d0d85f74d8289814.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="selinux的config文件"></p>
+<p>先注释文件里面的两句，再在最后加上SELINUX=disabled<br><img src="https://s2.ax1x.com/2020/01/04/l0pN38.png" alt="selinux的config文件"></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#使修改生效</span><br><span class="line">source &#x2F;etc&#x2F;selinux&#x2F;config</span><br></pre></td></tr></table></figure>
 
 <h6 id="启动vsftpd服务"><a href="#启动vsftpd服务" class="headerlink" title="启动vsftpd服务"></a>启动vsftpd服务</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service vsftpd start</span><br></pre></td></tr></table></figure>
