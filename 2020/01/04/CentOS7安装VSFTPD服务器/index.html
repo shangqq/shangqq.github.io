@@ -7,13 +7,19 @@
 
     
 
-    <title>onePage | 水瓶blog</title>
+    <title>CentOS7安装VSFTPD服务器 | 水瓶blog</title>
     <meta name="author" content="SFQQYQ">
+    
+    <meta name="description" content="FTP服务器是一种非常方便的文件夹共享服务，将FTP搭载在服务器上我们在服务器上共享指定的文件夹，我们再往这个文件夹里面上传文件，这样只要有ip和账户密码在我们本地电脑文件夹路径框中就能访问我们的FTP服务器下载需要的文件。
+
+安装环境说明
+CentOS7.4版本
+FTP安装包(在安装CentOS时">
     
     
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    
+    <meta property="og:title" content="CentOS7安装VSFTPD服务器"/>
     <meta property="og:site_name" content="水瓶里有一片海"/>
 
     
@@ -207,30 +213,100 @@
 
     <main>
         <div class="container main-container">
-    
-
-<nav class="page-nav hide-on-small-only">
+    <nav class="page-nav hide-on-small-only">
     <div class="nav-wrapper indigo">
-        <span class="breadcrumb">Current page(Tags)</span>
+        <span class="breadcrumb">Current page(Categories)</span>
         
+            
+    
+    
+    <a class="breadcrumb" href="/categories/Linux/">Linux</a>
+
 
         
-            <a class="breadcrumb" href="/tags/onePage/">onePage</a>
+
         
     </div>
 </nav>
 
+<article>
+    <div class="card">
+        <div class="card-content">
+            
+
+            <div class="article-title">
+                
+    
+        <h1>CentOS7安装VSFTPD服务器</h1>
+    
 
 
-    <div class="collection mt-0">
+            </div>
+            <time class="pink-link-context" datetime="2020-01-04T03:26:01.000Z"><a href="/2020/01/04/CentOS7%E5%AE%89%E8%A3%85VSFTPD%E6%9C%8D%E5%8A%A1%E5%99%A8/">2020-01-04</a></time>
+
+            <span id="busuanzi_container_page_pv" class="read-times-container">
+    <i class="fa fa-eye"></i>
+    <span id="busuanzi_value_page_pv"></span>
+</span>
+
+            
+    <div class="tags-row">
         
-            <a href="/2020/01/03/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/" class="collection-item grey-text text-darken-1">
-                <time datetime="2020-01-03T05:45:14.000Z">2020-01-03</time>
-                <span>&nbsp;&nbsp;&nbsp;</span>
-                我的第一篇博客
-            </a>
+            <a href="/tags/Linux-CentOS-FTP/" class="chip pink lighten-1">Linux_CentOS_FTP</a>
         
     </div>
+
+
+            <div class="toc pink-link-context hide-on-med-and-down">
+    <ol class="section table-of-contents"><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#安装环境说明"><span class="section table-of-contents-text">安装环境说明</span></a></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#安装前准备"><span class="section table-of-contents-text">安装前准备</span></a><ol class="section table-of-contents-child"><li class="section table-of-contents-item section table-of-contents-level-5"><a class="section table-of-contents-link" href="#创建需要共享的文件夹"><span class="section table-of-contents-text">创建需要共享的文件夹</span></a></li><li class="section table-of-contents-item section table-of-contents-level-5"><a class="section table-of-contents-link" href="#创建FTP账户和密码"><span class="section table-of-contents-text">创建FTP账户和密码</span></a></li><li class="section table-of-contents-item section table-of-contents-level-5"><a class="section table-of-contents-link" href="#给共享文件夹权限和指定用户"><span class="section table-of-contents-text">给共享文件夹权限和指定用户</span></a></li></ol></li></ol></li></ol></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#修改配置文件"><span class="section table-of-contents-text">修改配置文件</span></a><ol class="section table-of-contents-child"><li class="section table-of-contents-item section table-of-contents-level-6"><a class="section table-of-contents-link" href="#修改FTP配置文件"><span class="section table-of-contents-text">修改FTP配置文件</span></a></li><li class="section table-of-contents-item section table-of-contents-level-6"><a class="section table-of-contents-link" href="#启动vsftpd服务"><span class="section table-of-contents-text">启动vsftpd服务</span></a></li><li class="section table-of-contents-item section table-of-contents-level-6"><a class="section table-of-contents-link" href="#配置开机默认启动vsftpd服务"><span class="section table-of-contents-text">配置开机默认启动vsftpd服务</span></a></li><li class="section table-of-contents-item section table-of-contents-level-6"><a class="section table-of-contents-link" href="#重启测试"><span class="section table-of-contents-text">重启测试</span></a></li></ol></li></ol></li></ol></li></ol></li></ol>
+</div>
+
+
+            <div class="entry pink-link-context">
+                <blockquote>
+<p>FTP服务器是一种非常方便的文件夹共享服务，将FTP搭载在服务器上<br>我们在服务器上共享指定的文件夹，我们再往这个文件夹里面上传文件，这样只要有ip和账户密码在我们本地电脑文件夹路径框中就能访问我们的FTP服务器下载需要的文件。</p>
+</blockquote>
+<h2 id="安装环境说明"><a href="#安装环境说明" class="headerlink" title="安装环境说明"></a>安装环境说明</h2><ul>
+<li>CentOS7.4版本</li>
+<li>FTP安装包(在安装CentOS时可以选择FTP服务器)</li>
+<li>SSH工具</li>
+</ul>
+<h2 id="安装前准备"><a href="#安装前准备" class="headerlink" title="安装前准备"></a>安装前准备</h2><h5 id="创建需要共享的文件夹"><a href="#创建需要共享的文件夹" class="headerlink" title="创建需要共享的文件夹"></a>创建需要共享的文件夹</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mkdir -p &#x2F;data&#x2F;collect</span><br><span class="line">#&#x2F;data&#x2F;collect 这个文件夹可以自己创建</span><br></pre></td></tr></table></figure>
+<h5 id="创建FTP账户和密码"><a href="#创建FTP账户和密码" class="headerlink" title="创建FTP账户和密码"></a>创建FTP账户和密码</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#&#x2F;data&#x2F;collect是共享文件夹目录 ftpyh是创建的FTP用户名</span><br><span class="line">useradd -d &#x2F;data&#x2F;collect -g ftp -s &#x2F;sbin&#x2F;nologin ftpyh</span><br><span class="line">#给ftpyh这个用户添加一个密码，需要输入两次密码</span><br><span class="line">passwd ftpyh</span><br></pre></td></tr></table></figure>
+<h5 id="给共享文件夹权限和指定用户"><a href="#给共享文件夹权限和指定用户" class="headerlink" title="给共享文件夹权限和指定用户"></a>给共享文件夹权限和指定用户</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#给&#x2F;data最高权限</span><br><span class="line">chmod -R 777 &#x2F;data&#x2F;</span><br><span class="line">#将&#x2F;data指定给ftpyh用户</span><br><span class="line">chown -R ftpyh &#x2F;data&#x2F;</span><br></pre></td></tr></table></figure>
+
+<h2 id="修改配置文件"><a href="#修改配置文件" class="headerlink" title="修改配置文件"></a>修改配置文件</h2><h6 id="修改FTP配置文件"><a href="#修改FTP配置文件" class="headerlink" title="修改FTP配置文件"></a>修改FTP配置文件</h6> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#编辑vsftp.conf文件</span><br><span class="line">vim &#x2F;etc&#x2F;vsftpd&#x2F;vsftpd.conf</span><br></pre></td></tr></table></figure>
+
+<p>在vsftp.conf中将anonymous_enable=NO,并在该句的下方加上local_root=/data/collect。<br><img src="https://upload-images.jianshu.io/upload_images/2367321-71522a518c0d378a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="vsftp.conf"></p>
+<p>######修改selinux文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#修改selinux配置文件</span><br><span class="line">vim &#x2F;etc&#x2F;selinux&#x2F;config</span><br></pre></td></tr></table></figure>
+<p>先注释文件里面的两句，再在最后加上SELINUX=disabled<br><img src="https://upload-images.jianshu.io/upload_images/2367321-d0d85f74d8289814.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="selinux的config文件"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#使修改生效</span><br><span class="line">source &#x2F;etc&#x2F;selinux&#x2F;config</span><br></pre></td></tr></table></figure>
+
+<h6 id="启动vsftpd服务"><a href="#启动vsftpd服务" class="headerlink" title="启动vsftpd服务"></a>启动vsftpd服务</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service vsftpd start</span><br></pre></td></tr></table></figure>
+<h6 id="配置开机默认启动vsftpd服务"><a href="#配置开机默认启动vsftpd服务" class="headerlink" title="配置开机默认启动vsftpd服务"></a>配置开机默认启动vsftpd服务</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chkconfig vsftpd on</span><br></pre></td></tr></table></figure>
+
+<h6 id="重启测试"><a href="#重启测试" class="headerlink" title="重启测试"></a>重启测试</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">shutdown -r now</span><br></pre></td></tr></table></figure>
+
+                
+
+
+<p class="pink-link-context">
+    <a href="/2020/01/03/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/" rel="next" title="我的第一篇博客">
+    Next: 我的第一篇博客
+  </a>
+</p>
+
+
+            </div>
+			
+        </div>
+    </div>
+</article>
+
+
+
+
 
 
 </div>
