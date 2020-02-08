@@ -12,11 +12,17 @@
     
     <meta name="description" content="总结Java基本知识，是为了以后更好的发展。万丈高楼起于垒土！
 
-1、接口与抽象类的异同$\color{red}{相同:}$
+1、接口与抽象类的异同相同:
+
 都不能创建对象
-都可以定义抽象方法，并且一定要在子类中重写$\color{red}{不同:}$
+都可以定义抽象方法，并且一定要在子类中重写
+
+不同:
+
 关键字不同abstract interface
-抽象方法中既可以有抽象的方法也">
+抽象方法中既可以有抽象的方法也可以有普通的方法
+接口中所有的方法都是抽象方法
+抽象">
     
     
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -185,16 +191,16 @@
         
 
             <li class="collapse-level-0" collapse-level="0">
-                <a class="no-padding" href="/categories/Java/">
-                    Java <span class="right">2</span></a>
+                <a class="no-padding" href="/categories/Spring/">
+                    Spring <span class="right">1</span></a>
                 </a>
             </li>
 
         
 
             <li class="collapse-level-0" collapse-level="0">
-                <a class="no-padding" href="/categories/Spring/">
-                    Spring <span class="right">1</span></a>
+                <a class="no-padding" href="/categories/Java/">
+                    Java <span class="right">2</span></a>
                 </a>
             </li>
 
@@ -268,7 +274,7 @@
 
 
             <div class="toc pink-link-context hide-on-med-and-down">
-    <ol class="section table-of-contents"><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#1、接口与抽象类的异同"><span class="section table-of-contents-text">1、接口与抽象类的异同</span></a><ol class="section table-of-contents-child"><li class="section table-of-contents-item section table-of-contents-level-4"><a class="section table-of-contents-link" href="#color-red-相同"><span class="section table-of-contents-text">$\color{red}{相同:}$</span></a></li><li class="section table-of-contents-item section table-of-contents-level-4"><a class="section table-of-contents-link" href="#color-red-不同"><span class="section table-of-contents-text">$\color{red}{不同:}$</span></a></li></ol></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#2、重载-overload-和重写-overwrite-区别"><span class="section table-of-contents-text">2、重载(overload)和重写(overwrite)区别</span></a><ol class="section table-of-contents-child"><li class="section table-of-contents-item section table-of-contents-level-5"><a class="section table-of-contents-link" href="#重写的规则-（子类和父类-子类重写了父类的方法）"><span class="section table-of-contents-text">重写的规则 （子类和父类,子类重写了父类的方法）</span></a></li><li class="section table-of-contents-item section table-of-contents-level-5"><a class="section table-of-contents-link" href="#重载的规则-两同一不同"><span class="section table-of-contents-text">重载的规则 (两同一不同 )</span></a></li></ol></li></ol></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#3、StringBuffer、StringBuilder、String-区别"><span class="section table-of-contents-text">3、StringBuffer、StringBuilder、String 区别</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#4、冒泡排序"><span class="section table-of-contents-text">4、冒泡排序</span></a><ol class="section table-of-contents-child"><li class="section table-of-contents-item section table-of-contents-level-4"><a class="section table-of-contents-link" href="#工具类排序算法"><span class="section table-of-contents-text">工具类排序算法</span></a></li></ol></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#5、选择排序"><span class="section table-of-contents-text">5、选择排序</span></a></li></ol>
+    <ol class="section table-of-contents"><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#1、接口与抽象类的异同"><span class="section table-of-contents-text">1、接口与抽象类的异同</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#2、重载-overload-和重写-overwrite-区别"><span class="section table-of-contents-text">2、重载(overload)和重写(overwrite)区别</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#3、StringBuffer、StringBuilder、String-区别"><span class="section table-of-contents-text">3、StringBuffer、StringBuilder、String 区别</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#4、冒泡排序"><span class="section table-of-contents-text">4、冒泡排序</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#5、选择排序"><span class="section table-of-contents-text">5、选择排序</span></a></li></ol>
 </div>
 
 
@@ -276,20 +282,28 @@
                 <blockquote>
 <p>总结Java基本知识，是为了以后更好的发展。万丈高楼起于垒土！</p>
 </blockquote>
-<h3 id="1、接口与抽象类的异同"><a href="#1、接口与抽象类的异同" class="headerlink" title="1、接口与抽象类的异同"></a><strong>1、接口与抽象类的异同</strong></h3><h4 id="color-red-相同"><a href="#color-red-相同" class="headerlink" title="$\color{red}{相同:}$"></a>$\color{red}{相同:}$</h4><ul>
+<h3 id="1、接口与抽象类的异同"><a href="#1、接口与抽象类的异同" class="headerlink" title="1、接口与抽象类的异同"></a><strong>1、接口与抽象类的异同</strong></h3><p><strong>相同:</strong></p>
+<ul>
 <li>都不能创建对象</li>
-<li>都可以定义抽象方法，并且一定要在子类中重写<h4 id="color-red-不同"><a href="#color-red-不同" class="headerlink" title="$\color{red}{不同:}$"></a>$\color{red}{不同:}$</h4></li>
+<li>都可以定义抽象方法，并且一定要在子类中重写</li>
+</ul>
+<p><strong>不同:</strong></p>
+<ul>
 <li>关键字不同<strong>abstract interface</strong></li>
 <li>抽象方法中既可以有抽象的方法也可以有普通的方法</li>
 <li>接口中所有的方法都是抽象方法</li>
 <li>抽象类的方法可以任意权限，接口中方法只能是<strong>public</strong></li>
 <li>抽象类只能单继承，接口可以多实现</li>
 </ul>
-<h3 id="2、重载-overload-和重写-overwrite-区别"><a href="#2、重载-overload-和重写-overwrite-区别" class="headerlink" title="2、重载(overload)和重写(overwrite)区别"></a><strong>2、重载(overload)和重写(overwrite)区别</strong></h3><h5 id="重写的规则-（子类和父类-子类重写了父类的方法）"><a href="#重写的规则-（子类和父类-子类重写了父类的方法）" class="headerlink" title="重写的规则 （子类和父类,子类重写了父类的方法）"></a>重写的规则 <em>（子类和父类,子类重写了父类的方法）</em></h5><ul>
+<h3 id="2、重载-overload-和重写-overwrite-区别"><a href="#2、重载-overload-和重写-overwrite-区别" class="headerlink" title="2、重载(overload)和重写(overwrite)区别"></a><strong>2、重载(overload)和重写(overwrite)区别</strong></h3><p><strong>重写的规则</strong> <em>（子类和父类,子类重写了父类的方法）</em></p>
+<ul>
 <li>方法名、参数列表必须和父类完全一致</li>
 <li>返回值类型要么相同，要么子类方法的返回值类型是父类方法返回值类型的子类！</li>
 <li>访问修饰符要么相同，要么子类访问修饰符范围大于父类！</li>
-<li>方法中抛出的异常，要么相同。要么子类方法抛出的异常比父类被重写方法抛出的异常<br>更小或相同！<h5 id="重载的规则-两同一不同"><a href="#重载的规则-两同一不同" class="headerlink" title="重载的规则 (两同一不同 )"></a>重载的规则 <em>(两同一不同 )</em></h5></li>
+<li>方法中抛出的异常，要么相同。要么子类方法抛出的异常比父类被重写方法抛出的异常<br>更小或相同！</li>
+</ul>
+<p><strong>重载的规则</strong> <em>(两同一不同 )</em></p>
+<ul>
 <li>同一个类中</li>
 <li>方法名相同</li>
 <li>参数列表不同（个数，列表，类型）</li>
@@ -299,7 +313,8 @@
 <p><strong>1.String 字符串常量不可变使用字符串拼接时会开辟新空间</strong><br><strong>2.StringBuffer 字符串变量可变线程安全字符串拼接直接在字符串后追加</strong><br><strong>3.StringBuilder 字符串变量可变非线程安全字符串拼接直接在字符串后追加</strong><br><strong>4.StringBuilder 执行效率高 StringBuffer，高于 String</strong><br><strong>5.String 是一个常量，是不可变的，所以对于每一次+=赋值都会创建一个新<br>的对象， StringBuffer 和 StringBuilder 都是可变的，当进行字符串拼接时采<br>用 append 方 法，在原来的基础上进行追加，所以性能比 String 要高</strong><br><strong>6.StringBuffer 是线程安全的而 StringBuilder 是线程非安全的，所以 StringBuilder<br>的效率高于 StringBuffer</strong><br><strong>6.对于大数据量的字符串的拼接，采用 StringBuffer,StringBuilder</strong></p>
 </blockquote>
 <h3 id="4、冒泡排序"><a href="#4、冒泡排序" class="headerlink" title="4、冒泡排序"></a><strong>4、冒泡排序</strong></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;冒泡排序算法</span><br><span class="line">int[] array&#x3D;&#123;12,11,5,18,34,21,100,999&#125;;</span><br><span class="line">int temp&#x3D;0;</span><br><span class="line">for(int i&#x3D;0;i&lt;array.length-1;i++)&#123;</span><br><span class="line">    for(int j&#x3D;0;j&lt;array.length-i-1;j++)&#123;</span><br><span class="line">      if(array[j]&gt;array[j+1])&#123;</span><br><span class="line">        temp&#x3D;array[j];</span><br><span class="line">        array[j]&#x3D;array[j+1];</span><br><span class="line">        array[j+1]&#x3D;temp;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">&#x2F;&#x2F;输入排序之后数组</span><br><span class="line">    for(int i : array)&#123;</span><br><span class="line">      System.out.print(i+&quot;\t&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="工具类排序算法"><a href="#工具类排序算法" class="headerlink" title="工具类排序算法"></a>工具类排序算法</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">int[ ] array&#x3D;&#123;12,11,5,18,34,21,100,999&#125;;</span><br><span class="line">Arrays.sort(array); &#x2F;&#x2F;工具类:默认是升序</span><br><span class="line">for (int i &#x3D; array .1ength-1; i &gt;&#x3D;0; i--) &#123;</span><br><span class="line">  System.out. print(array[i]+&quot;\t&quot; );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>工具类排序算法</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">int[ ] array&#x3D;&#123;12,11,5,18,34,21,100,999&#125;;</span><br><span class="line">Arrays.sort(array); &#x2F;&#x2F;工具类:默认是升序</span><br><span class="line">for (int i &#x3D; array .1ength-1; i &gt;&#x3D;0; i--) &#123;</span><br><span class="line">  System.out. print(array[i]+&quot;\t&quot; );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h3 id="5、选择排序"><a href="#5、选择排序" class="headerlink" title="5、选择排序"></a><strong>5、选择排序</strong></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">public static void main(String[] args) &#123;</span><br><span class="line">int[]a&#x3D;&#123;25,15,42,16,12,36&#125;;</span><br><span class="line">int max &#x3D; 0;</span><br><span class="line">int tmp &#x3D; 0;</span><br><span class="line">for (int i &#x3D; 0; i &lt; a.length; i++) &#123;</span><br><span class="line">  max &#x3D; i;&#x2F;&#x2F;</span><br><span class="line">  for(intj&#x3D;i+1;j&lt;a.length;j++)&#123;</span><br><span class="line">    if (a[max] &lt; a[j])</span><br><span class="line">    max &#x3D; j;&#x2F;&#x2F;记下较大数位置，再次比较，直到最大</span><br><span class="line">    if(i!&#x3D;max)&#123;</span><br><span class="line">      tmp &#x3D; a[i];</span><br><span class="line">      a[i] &#x3D; a[max];</span><br><span class="line">      a [max] &#x3D; tmp;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  for (int i &#x3D; 0; i &lt; a.length; i++) &#123;</span><br><span class="line">    System. out. print(a[i] + &quot; &quot;);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
