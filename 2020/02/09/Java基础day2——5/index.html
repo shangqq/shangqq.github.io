@@ -7,13 +7,27 @@
 
     
 
-    <title>Archives: 2020/2 | 水瓶blog</title>
+    <title>Java基础day2——5 | 水瓶blog</title>
     <meta name="author" content="SFQQYQ">
+    
+    <meta name="description" content="有些风景，如果你不站在高处，你永远体会不到它的魅力;有些路，如果你不去启程，你永远不知道它是多么的美丽。
+
+1、单例设计模式单例就是该类只能返回一个实例单例所具备的特点：
+
+私有化的构造函数
+私有的静态的全局变量
+公有的静态的方法
+
+懒汉式：
+线程安全懒汉式：
+饿汉式：
+2、常见的异常类型
+Null">
     
     
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    
+    <meta property="og:title" content="Java基础day2——5"/>
     <meta property="og:site_name" content="水瓶里有一片海"/>
 
     
@@ -215,52 +229,108 @@
 
     <main>
         <div class="container main-container">
-    
-
-<nav class="page-nav hide-on-small-only">
+    <nav class="page-nav hide-on-small-only">
     <div class="nav-wrapper indigo">
-        <span class="breadcrumb">Current page(Archives)</span>
+        <span class="breadcrumb">Current page(Categories)</span>
+        
+            
+    
+    
+    <a class="breadcrumb" href="/categories/Java/">Java</a>
+
+
         
 
         
     </div>
 </nav>
 
+<article>
+    <div class="card">
+        <div class="card-content">
+            
+
+            <div class="article-title">
+                
+    
+        <h1>Java基础day2——5</h1>
+    
 
 
-    <ul class="collapsible mt-0" data-collapsible="accordion">
+            </div>
+            <time class="pink-link-context" datetime="2020-02-09T04:07:23.000Z"><a href="/2020/02/09/Java%E5%9F%BA%E7%A1%80day2%E2%80%94%E2%80%945/">2020-02-09</a></time>
+
+            <span id="busuanzi_container_page_pv" class="read-times-container">
+    <i class="fa fa-eye"></i>
+    <span id="busuanzi_value_page_pv"></span>
+</span>
+
+            
+    <div class="tags-row">
         
+            <a href="/tags/object-Object/" class="chip pink lighten-1">[object Object]</a>
         
-            <li>
-                <div class="collapsible-header active">
-                    <i class="fa fa-archive"></i>2020
-                </div>
-                <div class="collapsible-body">
-                    <div class="collection">
-                        
-                            <a href="/2020/02/09/Java%E5%9F%BA%E7%A1%80day2%E2%80%94%E2%80%945/" class="collection-item grey-text text-darken-1">
-                                <time datetime="2020-02-09T04:07:23.000Z">2020-02-09</time>
-                                <span>&nbsp;&nbsp;&nbsp;</span>
-                                Java基础day2——5
-                            </a>
-                        
-                            <a href="/2020/02/08/Java%E5%9F%BA%E7%A1%80day1%E2%80%94%E2%80%945/" class="collection-item grey-text text-darken-1">
-                                <time datetime="2020-02-08T08:40:29.000Z">2020-02-08</time>
-                                <span>&nbsp;&nbsp;&nbsp;</span>
-                                Java基础day1——5
-                            </a>
-                        
-                            <a href="/2020/02/04/SpringMVC%E8%A1%A8%E5%8D%95%E6%8F%90%E4%BA%A4%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81%E8%A7%A3%E5%86%B3/" class="collection-item grey-text text-darken-1">
-                                <time datetime="2020-02-04T15:52:21.000Z">2020-02-04</time>
-                                <span>&nbsp;&nbsp;&nbsp;</span>
-                                SpringMVC表单提交中文乱码解决
-                            </a>
-                        
-                    </div>
-                </div>
-            </li>
-        
-    </ul>
+    </div>
+
+
+            <div class="toc pink-link-context hide-on-med-and-down">
+    <ol class="section table-of-contents"><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#1、单例设计模式"><span class="section table-of-contents-text">1、单例设计模式</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#2、常见的异常类型"><span class="section table-of-contents-text">2、常见的异常类型</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#3、Throws-和-Throw-的区别"><span class="section table-of-contents-text">3、Throws 和 Throw 的区别</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#4、Final、Finally、finalize-关键字的作用"><span class="section table-of-contents-text">4、Final、Finally、finalize 关键字的作用</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#5、Final-关键字的作用"><span class="section table-of-contents-text">5、Final 关键字的作用</span></a></li></ol>
+</div>
+
+
+            <div class="entry pink-link-context">
+                <blockquote>
+<p>有些风景，如果你不站在高处，你永远体会不到它的魅力;有些路，如果你不去启程，你永远不知道它是多么的美丽。</p>
+</blockquote>
+<h3 id="1、单例设计模式"><a href="#1、单例设计模式" class="headerlink" title="1、单例设计模式"></a><strong>1、单例设计模式</strong></h3><p><strong>单例就是该类只能返回一个实例</strong><br><strong>单例所具备的特点：</strong></p>
+<ul>
+<li>私有化的构造函数</li>
+<li>私有的静态的全局变量</li>
+<li>公有的静态的方法</li>
+</ul>
+<p><strong>懒汉式：</strong><br><img src="https://upload-images.jianshu.io/upload_images/2367321-a5d37ed6325ceb69.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="懒汉式"></p>
+<p><strong>线程安全懒汉式：</strong><br><img src="https://upload-images.jianshu.io/upload_images/2367321-a846a9b1bb5af0c4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="线程安全懒汉式"></p>
+<p><strong>饿汉式：</strong><br><img src="https://upload-images.jianshu.io/upload_images/2367321-4f401526a72728d0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="饿汉式："></p>
+<h3 id="2、常见的异常类型"><a href="#2、常见的异常类型" class="headerlink" title="2、常见的异常类型"></a><strong>2、常见的异常类型</strong></h3><blockquote>
+<p><strong>NullPointerException</strong> 空指针异常<br><strong>ClassCastException</strong> 类型强制转换异常<br><strong>IllegalArgumentException</strong> 传递非法参数异常<br><strong>ArithmeticException</strong> 算数运算异常<br><strong>IndexOutOfBoundsException</strong> 下标越界异常<br><strong>NumberFormatException</strong> 数字格式异常<br><strong>ClassNotFindException</strong> 加载请求异常</p>
+</blockquote>
+<h3 id="3、Throws-和-Throw-的区别"><a href="#3、Throws-和-Throw-的区别" class="headerlink" title="3、Throws 和 Throw 的区别"></a><strong>3、Throws 和 Throw 的区别</strong></h3><ul>
+<li><strong>位置：</strong> Throw 方法内部， Throws 方法名之后</li>
+<li><strong>作用：</strong> Throw 抛出异常， Throws 声明异常</li>
+<li><strong>个数：</strong> Throw 一次抛出一个异常， Throws 可以声明多个异常<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">public static void main(String[] args) throws ArithmeticException, Exception&#123;</span><br><span class="line">  try &#123;</span><br><span class="line">    int i&#x3D;100&#x2F;0;</span><br><span class="line">  &#125;</span><br><span class="line">  catch (ArithmeticException e) &#123;</span><br><span class="line">  throw new ArithmeticException( &quot;除数不能0&quot;);</span><br><span class="line">  &#125;catch (Exception e) &#123;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h3 id="4、Final、Finally、finalize-关键字的作用"><a href="#4、Final、Finally、finalize-关键字的作用" class="headerlink" title="4、Final、Finally、finalize 关键字的作用"></a><strong>4、Final、Finally、finalize 关键字的作用</strong></h3><ul>
+<li><strong>final</strong> 用于声明属性，方法和类，分别表示属性不可变，方法不可覆盖，类不可继承。</li>
+<li><strong>finally</strong> 是异常处理语句结构的一部分，表示总是执行。不管是否有异常总是被执行，除非虚拟机停止才不执行。 System.exit(1);</li>
+<li><strong>finalize</strong> 是 Object 类的一个方法，在垃圾收集器执行的时候会调用被回收对象的此方法可以实现资源回收，释放资源，例如关闭文件等。JVM 不保证此方法总被调用。</li>
+</ul>
+<h3 id="5、Final-关键字的作用"><a href="#5、Final-关键字的作用" class="headerlink" title="5、Final 关键字的作用"></a><strong>5、Final 关键字的作用</strong></h3><ul>
+<li><strong>修饰类：</strong>（最终类）不能被子类继承</li>
+<li><strong>修饰方法：</strong>（最终方法）不能被子类重写</li>
+<li><strong>修饰变量：</strong>（常量）一旦声明之后，不能再次修改其中的值</li>
+</ul>
+
+                
+
+
+<p class="pink-link-context">
+    <a href="/2020/02/08/Java%E5%9F%BA%E7%A1%80day1%E2%80%94%E2%80%945/" rel="next" title="Java基础day1——5">
+    Next: Java基础day1——5
+  </a>
+</p>
+
+
+            </div>
+			
+        </div>
+    </div>
+</article>
+
+
+
+
 
 
 </div>
